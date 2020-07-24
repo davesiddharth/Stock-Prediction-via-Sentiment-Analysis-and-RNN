@@ -1,0 +1,185 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/4527be2408.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Dashboard:Facebook</title>
+</head>
+
+
+<body style="background-color: #f8f9fa;">
+
+    <!-- top navbar -->
+    <nav class ="navbar navbar-dark bg-dark" id="topbar">
+        <a href="index.html" class="bg-dark text-white navbar-brand">&nbsp; Stock Market Prediction &nbsp;</a>
+    </nav>
+
+    <!-- sidebar and main_body -->
+    <div class="wrapper">
+        <nav id="sidebar">
+            <ul class ="listed-unstyled components">
+                <a href="index.html" style="text-decoration: none;">
+                    <p style="font-size:18px; font-weight:700; text-align: center; color: grey;">UNICODE</p>
+                </a>
+                <li class="active" >
+                    <a href="dashboard_google.html" class="text-secondary"><ion-icon name="apps-outline"></ion-icon> Dashboard</a>
+                </li>
+                <li class="active" >
+                    <a href="comparison.html" class="text-secondary"><ion-icon name="cellular-outline"></ion-icon> Comparison</a>
+                </li>
+                <li>
+                    <a href="flowcharts.html" class=" text-secondary"><ion-icon name="bar-chart-outline"></ion-icon> Flow Charts</a>
+                </li>
+                <li>
+                    <a href="contact.html" class=" text-secondary"><ion-icon name="person-outline"></ion-icon> Meet Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- shortcuts -->
+        <div class="row">
+            <div class="col-xl-1"></div>
+            <div class="col-xl-1"></div>
+            <div class="col-xl-1"></div>
+
+            <div class="col-md-1 col-sm-3 mt-5">
+                <a href="dashboard_google.html" style="text-decoration: none;">
+                    <!-- <div id="shortcut1"> -->
+                        <img src=assets/icons8-google-96.png>
+                        <p id="shortcut_stockname">GOOGLE</p>
+                    <!-- </div> -->
+                </a>
+            </div>
+            <div class="col-md-1 col-sm-3  mt-5">
+                <a href="dashboard_amazon.html" style="text-decoration: none;">
+                    <img src=assets/icons8-amazon-96.png>
+                        <p id="shortcut_stockname">AMAZON</p>
+                    <!-- </div> -->
+                </a>
+            </div>
+            <div class="col-md-1 col-sm-3 mt-5">
+                <a href="dashboard_facebook.html" style="text-decoration: none;">
+                    <!-- <div id="shortcut3"> -->
+                        <img src=assets/icons8-facebook-96.png>
+                        <p id="shortcut_stockname">FACEBOOK</p>
+                    <!-- </div> -->
+                </a>
+            </div>
+            <div class="col-md-1 col-sm-3 mt-5">
+                <a href="dashboard_microsoft.html" style="text-decoration: none;">
+                    <!-- <div id="shortcut4"> -->
+                        <img src=assets/icons8-microsoft-96.png>
+                        <p id="shortcut_stockname">MICROSOFT</p>
+                    <!-- </div> -->
+                </a>
+            </div>
+            <div class="col-md-1 col-sm-3 mt-5">
+                <a href="dashboard_apple.html" style="text-decoration: none;">
+                    <!-- <div id="shortcut5"> -->
+                        <img src=assets/icons8-apple-logo-96.png>
+                        <p id="shortcut_stockname">&nbsp;&nbsp;&nbsp;APPLE</p>
+                    <!-- </div> -->
+                </a>
+            </div>
+            <div class="col-md-1 col-sm-3 mt-5">
+                <a href="dashboard_tesla.html" style="text-decoration: none;">
+                    <!-- <div id="shortcut6"> -->
+                        <img src=assets/icons8-tesla-96.png>
+                        <p id="shortcut_stockname">&nbsp;&nbsp;&nbsp;TESLA</p>
+                    <!-- </div> -->
+                </a>
+            </div>
+            
+            <!-- stock name -->
+            <div class="col-xl-10">
+            <p class="ml-5 pl-3" id="stockname">Facebook (FB)</p>
+            </div>
+
+            <!-- plots -->
+            <div class ="container" style="background-color: white;padding-top: 5%;">
+                <div class = "row">
+                    <div id ="fb_plot" class="col-xl-10 ml-4">
+                        <script src="js/fb.js"></script>
+                        <!-- <img src="assets/placeholder.jpg" id=dashboard_plot> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class ="container" style="background-color: white;">
+                <div class = "row">
+                    <div id = "facebook_prediction_plot" class="col-xl-10 ml-4">
+                        <script src = "js/facebook_prediction.js"></script>
+                        <script src = "js/facebook_target.js"></script>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- sentimental analysis table title -->
+            <div class="container" style="background-color: white;">
+                
+                <div class="row">
+                    
+                     <div id ="fb_predict" class="col-xl-10 ml-4">
+                         <script src="js/prediction_plot-fb.js"></script>
+                
+                     </div>
+                </div>
+            </div>
+
+            <!-- sentimental analysis table title -->
+            <div class ="container" style="background-color: white;padding-bottom: 5%;">
+                <div class = "row">
+                    <div class="col-xl-10">
+                        <h3 style="text-align: center;margin-left: 10%;">Confusion Matrix</h3>
+                    </div>
+                </div>
+                <div class= "row">
+                    <div class="col-xl-10" id="matrix_tab">
+                        <div class="table-responsive">
+                            <table  class="matrix_center" style="margin-left: 22%;">
+                              <thead>
+                                <tr>
+                                  <th>True Positive</th>
+                                  <th>True Negative</th>
+                                  <th>False Positive</th>
+                                  <th>False Negative</th>
+                                  <th>Model Accuracy</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                  <td>123</td>
+                                  <td>113</td>
+                                  <td>122</td>
+                                  <td>147</td>
+                                  <td>46.7%</td>
+                              </tbody>
+                        
+                            </table>
+                        
+                        </div>
+        
+                    </div>
+
+                </div>
+            </div>
+
+    <!-- wrapper closing -->
+    </div>
+
+   
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
