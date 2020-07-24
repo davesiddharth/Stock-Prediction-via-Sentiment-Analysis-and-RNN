@@ -1,0 +1,138 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/4527be2408.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <title>Comparison</title>
+</head>
+
+
+<body style="background-color: #f8f9fa;">
+
+    <!-- top navbar -->
+    <nav class ="navbar navbar-dark bg-dark" id="topbar">
+        <a href="index.html" class="bg-dark text-white navbar-brand">&nbsp; Stock Market Prediction &nbsp;</a>
+    </nav>
+
+    <!-- sidebar and main_body -->
+    <div class="wrapper">
+        <nav id="sidebar">
+            <ul class ="listed-unstyled components">
+                <a href="index.html" style="text-decoration: none;">
+                    <p style="font-size:18px; font-weight:700; text-align: center; color: grey;">UNICODE</p>
+                </a>
+                <li class="active" >
+                    <a href="dashboard_google.html" class="text-secondary"><ion-icon name="apps-outline"></ion-icon> Dashboard</a>
+                </li>
+                <li class="active" >
+                    <a href="comparison.html" class="text-secondary"><ion-icon name="cellular-outline"></ion-icon> Comparison</a>
+                </li>
+                <li>
+                    <a href="flowcharts.html" class=" text-secondary"><ion-icon name="bar-chart-outline"></ion-icon> Flow Charts</a>
+                </li>
+                <li>
+                    <a href="contact.html"  class=" text-secondary"><ion-icon name="person-outline"></ion-icon> Meet Us</a>
+                </li>
+            </ul>
+        </nav>
+
+            <div class = "container" style="background-color: white;padding-bottom: 5%;">
+                
+                <div class="row">
+                    <div class="col-xl-10">
+                        <p class="ml-5 pl-3" id="SAT">Model Comparison</p>
+                    </div>
+                    <div id = "comparison_plot" class="col-xl-10 sm-4">
+                        <script src = "js/apple_comparison.js"></script>
+                        <script src = "js/amazon_comparison.js"></script>
+                        <script src = "js/facebook_comparison.js"></script>
+                        <script src = "js/google_comparison.js"></script>
+                        <script src = "js/microsoft_comparison.js"></script>
+                        <script src = "js/tesla_comparison.js"></script>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id = "raw_comparison_plot" class="col-xl-10 sm-4">
+                        <script src = "js/apple_comparison_raw.js"></script>
+                        <script src = "js/amazon_comparison_raw.js"></script>
+                        <script src = "js/facebook_comparison_raw.js"></script>
+                        <script src = "js/google_comparison_raw.js"></script>
+                        <script src = "js/microsoft_comparison_raw.js"></script>
+                        <script src = "js/tesla_comparison_raw.js"></script>
+
+                    </div>
+                </div>
+
+            <!-- sentimental analysis table title -->
+            <div class = "row">
+            <!-- <div class="col-xl-10">
+                <p class="ml-5 pl-3" id="SAT">Model Accuracy Comparison</p>
+            </div> -->
+
+            <!-- aaccurcy table-->
+            <div class="col-xl-10">
+                <table class="matrix_center">
+                    <tr>
+                        <th>Company Name</th>
+                        <th>NLP Model</th>
+                        <th>RNN Model</th>
+                    </tr>
+                    <tr>
+                        <td>Amazon</td>
+                        <td>47.8%</td>
+                        <td>93%/98%/85%</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>54.8%</td>
+                        <td>73%/60%/57%</td>
+                    </tr>
+                    <tr>
+                        <td>Facebook</td>
+                        <td>46.7%</td>
+                        <td>51%/36%/54%</td>
+                    </tr>
+                    <tr>
+                        <td>Google</td>
+                        <td>50.2%</td>
+                        <td>80%/85%/64%</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft</td>
+                        <td>53.6%</td>
+                        <td>58%/83%/93%</td>
+                    </tr>
+                    <tr>
+                        <td>Tesla</td>
+                        <td>52.1%</td>
+                        <td>99%/99%/90%</td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+        </div>
+
+
+    <!-- wrapper closing -->
+    </div>
+
+   
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
