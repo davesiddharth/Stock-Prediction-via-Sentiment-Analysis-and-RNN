@@ -54,7 +54,13 @@ var layout = {
     {step: 'all'}
   ]}
   },
-  yaxis:{title: "Stock Price"}
+  yaxis:{title: "Stock Price"},
+  title: {
+    text: "Stock trend (2014-2020)",
+    font: {
+      size: 24
+    },
+  },
 };
 
 Plotly.newPlot('tesla_plot', data, layout);
